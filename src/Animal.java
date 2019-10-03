@@ -12,6 +12,7 @@ public abstract class Animal implements IDiet {
         this.type = type;
     }
 
+    @Override // dynamic polymorphism
     public void feed(int portion, String foodType) {
         int foodWeight = this.getWeight() / portion;
         JOptionPane.showMessageDialog(null, foodWeight + " gram " + foodType);
